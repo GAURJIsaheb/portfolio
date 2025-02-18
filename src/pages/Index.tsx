@@ -15,10 +15,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Short Story Generator",
+    title: "Shorts Story Generator",
     description: "This is a description for project two.",
     image: img2,
-    link: "https://projecttwo.com",
+    link: "https://aiproject-woad.vercel.app/",
   },
   {
     id: 3,
