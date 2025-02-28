@@ -1,50 +1,45 @@
 import { useEffect, useRef } from "react";
-import { Github, Linkedin, Mail, ArrowRight, Code2, Server, Database, Palette } from "lucide-react";
-import img1 from "../../Public/pr1.jpg"
-import img2 from "../../Public/pr2.jpg"
-
-
+import { Github, Linkedin, Mail, ArrowRight, Code2, Server, Database, Palette, Languages } from "lucide-react";
+import img1 from "../../Public/pr1.jpg";
+import img2 from "../../Public/pr2.jpg";
 
 const projects = [
   {
     id: 1,
-    title: "Acheivement Management Project",
-    description: "This is a description for project one.",
+    title: "Achievement Nexus",
+    description: "A cutting-edge platform to manage and celebrate achievements with flair.",
     image: img1,
     link: "https://achievement-management.vercel.app/",
   },
   {
     id: 2,
-    title: "Shorts Story Generator",
-    description: "This is a description for project two.",
+    title: "StoryForge AI",
+    description: "An AI-driven storytelling engine that crafts immersive narratives.",
     image: img2,
     link: "https://aiproject-woad.vercel.app/",
   },
-  {
-    id: 3,
-    title: "Project Three",
-    description: "This is a description for project three.",
-    image: "/pr3.jpg",
-    link: "https://projectthree.com",
-  },
+  // {
+  //   id: 3,
+  //   title: "Quantum Hub",
+  //   description: "A futuristic web ecosystem for seamless digital interaction.",
+  //   image: "/pr3.jpg",
+  //   link: "https://projectthree.com",
+  // },
 ];
 
-
-
 const Index = () => {
-  const observerRef = useRef<IntersectionObserver | null>(null);
-
+  const observerRef = useRef(null);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
+            entry.target.classList.add("animate-slideIn");
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.25 }
     );
 
     document.querySelectorAll(".animate-on-scroll").forEach((element) => {
@@ -55,231 +50,198 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">
+    <div className="min-h-screen bg-gray-950 text-white font-sans overflow-x-hidden">
       {/* Hero Section */}
-      <section className="h-screen flex items-center justify-center px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-5"></div>
-        <div className="relative text-center">
-          <span className="inline-block px-3 py-1 text-sm text-white text-foreground bg-accent rounded-full mb-4 animate-on-scroll opacity-0">
-            Full Stack Developer
-          </span>
-          <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 slide-in">
-            Creating Digital
-            <br /> Experiences That Matter
+      <section className="relative h-screen flex items-center justify-center px-6">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#3b82f6_0%,#000_80%)] opacity-70 animate-glow"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe')] bg-cover bg-center opacity-15"></div>
+        <div className="relative z-10 text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-textGlow">
+            Code That Captivates
           </h1>
-          <p className="text-slate-300 max-w-lg mx-auto mb-8 fade-in">
-            Passionate full stack developer crafting beautiful and functional web applications with modern technologies.
+          <p className="text-lg md:text-xl text-gray-200 mt-6 max-w-md mx-auto animate-on-scroll opacity-0">
+            I’m a Full Stack Developer building bold, breathtaking digital experiences.
           </p>
-          <div className="flex justify-center gap-4">
-            <a
-              href="#contact"
-              className="px-6 py-3 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 transition-colors"
-            >
-              Get in touch
-              <ArrowRight className="inline-block ml-2 w-4 h-4" />
-            </a>
-          </div>
+          <a
+            href="#contact"
+            className="mt-8 inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-purple-700 hover:scale-110 transition-all duration-300 animate-on-scroll opacity-0 delay-100"
+          >
+            Start a Revolution
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </a>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section id="about" className="py-24 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900"></div>
+        <div className="relative max-w-5xl mx-auto">
           <div className="animate-on-scroll opacity-0">
-            <span className="text-white text-sm uppercase tracking-wider">About Me</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mt-2 mb-8">
-              Turning Vision Into Reality
+            <h2 className="text-4xl md:text-5xl font-extrabold text-center text-blue-400 mb-12">
+              The Visionary Behind the Code
             </h2>
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="space-y-4 text-slate-300">
-                <p>
-                  With over 5 years of experience in full stack development, I specialize in building scalable web applications
-                  that provide exceptional user experiences.
-                </p>
-                <p>
-                  My expertise spans across modern frontend frameworks, backend technologies, and cloud platforms, allowing me
-                  to deliver end-to-end solutions that drive business growth.
-                </p>
-              </div>
-              
+            <div className="bg-gray-900/80 p-8 rounded-2xl shadow-xl border border-blue-500/30">
+              <p className="text-lg text-gray-200 leading-relaxed">
+              With over 5 years of expertise in Full Stack Development, I transform ideas into seamless digital experiences—blending intuitive frontends with robust backends to craft solutions that captivate and perform.
+              Armed with modern frameworks, cutting-edge technologies, and an unyielding passion for innovation, I thrive on pushing boundaries and delivering excellence.
+              </p>
+              <p className="text-lg text-gray-200 mt-4 leading-relaxed">
+                My toolkit? Modern frameworks, cutting-edge tech, and a relentless drive to push boundaries.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Technology and Tools Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="animate-on-scroll opacity-0">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mt-2 mb-12">
-              Tools & Technologies
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="glass-card p-6 rounded-lg group hover:bg-slate-700/50 transition-colors">
-                <div className="flex items-center gap-4 mb-4">
-                  <Code2 className="w-6 h-6 text-blue-400" />
-                  <h3 className="text-white font-bold">Frontend</h3>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">React</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">TypeScript</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="Next.js" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">Next.js</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">Tailwind</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="glass-card p-6 rounded-lg group hover:bg-slate-700/50 transition-colors">
-                <div className="flex items-center gap-4 mb-4">
-                  <Server className="w-6 h-6 text-green-400" />
-                  <h3 className="text-white font-bold">Backend</h3>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">Node.js</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">Express</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">Python</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg" alt="Django" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">Django</span>
-                  </div>
-                </div>
-              </div>
+      {/* Tech Stack Section */}
+      <section className="py-24 px-6 bg-gray-900/50">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl md:text-5xl font-extrabold text-center text-blue-400 mb-16 animate-on-scroll opacity-0">
+      My Arsenal of Awesome
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      {[
+        {
+          icon: <Code2 className="w-8 h-8 text-blue-400" />,
+          title: "Frontend",
+          skills: [
+            { name: "React", url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" },
+            { name: "TypeScript", url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" },
+            { name: "Next.js", url: "https://img.icons8.com/?size=64&id=AU6Wc7r56Fxz&format=png" },
+            { name: "Tailwind", url: "https://img.icons8.com/?size=48&id=CIAZz2CYc6Kc&format=png" },
+          ],
+        },
+        {
+          icon: <Server className="w-8 h-8 text-purple-400" />,
+          title: "Backend",
+          skills: [
+            { name: "Node.js", url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" },
+            { name: "Express", url: "https://img.icons8.com/?size=64&id=2ZOaTclOqD4q&format=png" },
+          ],
+        },
+        {
+          icon: <Database className="w-8 h-8 text-pink-400" />,
+          title: "Database",
+          skills: [
+            { name: "PostgreSQL", url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" },
+            { name: "MongoDB", url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" },
+            { name: "Redis", url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg" },
+            { name: "MySQL", url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" },
+          ],
+        },
+        {
+          icon: <Palette className="w-8 h-8 text-blue-300" />,
+          title: "Design",
+          skills: [
+            { name: "Figma", url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" },
+            { name: "Photoshop", url: "https://img.icons8.com/?size=48&id=NeNPFdj7MzXi&format=png" },
+            { name: "Canva", url: "https://img.icons8.com/?size=48&id=iWw83PVcBpLw&format=png" },
+          ],
+        },
+        {
+          icon: <Languages className="w-8 h-8 text-purple-400" />,
+          title: "Programming Languages",
+          skills: [
+            { name: "C++", url: "https://img.icons8.com/?size=48&id=40669&format=png" },
+            { name: "C", url: "https://img.icons8.com/?size=48&id=shQTXiDQiQVR&format=png" },
+            { name: "Java", url: "https://img.icons8.com/?size=48&id=Pd2x9GWu9ovX&format=png" },
+            { name: "Python", url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" },
 
-              <div className="glass-card p-6 rounded-lg group hover:bg-slate-700/50 transition-colors">
-                <div className="flex items-center gap-4 mb-4">
-                  <Database className="w-6 h-6 text-purple-400" />
-                  <h3 className="text-white font-bold">Database</h3>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">PostgreSQL</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">MongoDB</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg" alt="Redis" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">Redis</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">MySQL</span>
-                  </div>
-                </div>
+          ],
+        },
+      ].map((category) => (
+        <div
+          key={category.title}
+          className="p-6 bg-gray-800/70 rounded-xl border border-blue-500/20 hover:border-blue-500/50 hover:scale-105 transition-all duration-300 animate-on-scroll opacity-0"
+        >
+          <div className="flex items-center gap-4 mb-6">
+            {category.icon}
+            <h3 className="text-xl font-semibold text-white">{category.title}</h3>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            {category.skills.map((skill) => (
+              <div key={skill.name} className="flex flex-col items-center group">
+                <img
+                  src={skill.url}
+                  alt={skill.name}
+                  className="w-10 h-10 mb-2 group-hover:scale-110 transition-transform duration-300"
+                  onError={(e) => {
+                    if (e.target instanceof HTMLImageElement) {
+                      e.target.style.display = "none";
+                    }
+                  }}
+                />
+                <span className="text-gray-300 text-sm group-hover:text-blue-400">{skill.name}</span>
               </div>
-
-              <div className="glass-card p-6 rounded-lg group hover:bg-slate-700/50 transition-colors">
-                <div className="flex items-center gap-4 mb-4">
-                  <Palette className="w-6 h-6 text-orange-400" />
-                  <h3 className="text-white font-bold">Design</h3>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">Figma</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-plain.svg" alt="Photoshop" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">Photoshop</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/illustrator/illustrator-plain.svg" alt="Illustrator" className="w-12 h-12 mb-2" />
-                    <span className="text-slate-300 text-sm">Illustrator</span>
-                  </div>
-
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Projects Section */}
-      <section className="py-20 px-4">
-    <div className="max-w-6xl mx-auto">
-      <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-8">
-        My Projects
-      </h2>
-      <div className="grid md:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <div key={project.id} className="glass-card p-6 rounded-lg">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover rounded-md"
-            />
-            <h3 className="text-white font-bold mt-4">{project.title}</h3>
-            <p className="text-slate-300">{project.description}</p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent mt-2 inline-block"
-            >
-              View Project
-            </a>
+      <section id="projects" className="py-24 px-6 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,#3b82f6_0%,transparent_70%)] opacity-40"></div>
+        <div className="relative max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center text-blue-400 mb-16 animate-on-scroll opacity-0">
+            Masterpieces in Motion
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="group bg-gray-900/80 p-6 rounded-xl shadow-lg border border-blue-500/20 hover:border-blue-500/60 transition-all duration-300 animate-on-scroll opacity-0"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-60 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-500"
+                />
+                <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                <p className="text-gray-300 mb-4">{project.description}</p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                >
+                  Dive In
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
+        </div>
+      </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="animate-on-scroll opacity-0">
-            <span className="text-accent text-sm uppercase tracking-wider">Contact</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mt-2 mb-8">
-              Let's Work Together
-            </h2>
-            <div className="flex flex-wrap gap-6">
+      <section id="contact" className="py-24 px-6 bg-gray-900/70">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-blue-400 mb-12 animate-on-scroll opacity-0">
+            Let’s Create Fireworks
+          </h2>
+          <div className="flex flex-wrap justify-center gap-10">
+            {[
+              { icon: <Github className="w-8 h-8" />, link: "https://github.com", label: "GitHub" },
+              { icon: <Linkedin className="w-8 h-8" />, link: "https://www.linkedin.com/in/adityagaur01/", label: "LinkedIn" },
+              { icon: <Mail className="w-8 h-8" />, link: "mailto:contact@example.com", label: "Email" },
+            ].map((contact) => (
               <a
-                href="https://github.com"
+                key={contact.label}
+                href={contact.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors"
+                className="group flex flex-col items-center gap-3 text-gray-300 hover:text-blue-400 transition-all duration-300 animate-on-scroll opacity-0"
               >
-                <Github className="w-5 h-5" />
-                <span>GitHub</span>
+                <div className="p-3 bg-blue-500/20 rounded-full group-hover:bg-blue-500/40 group-hover:scale-110 transition-all">
+                  {contact.icon}
+                </div>
+                <span className="text-lg font-medium">{contact.label}</span>
               </a>
-              <a
-                href="https://www.linkedin.com/in/adityagaur01/"
-                target="_blank"
-                className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-                <span>LinkedIn</span>
-              </a>
-              <a
-                href="mailto:contact@example.com"
-                className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                <span>Email</span>
-              </a>
-            </div>
+            ))}
           </div>
         </div>
       </section>
