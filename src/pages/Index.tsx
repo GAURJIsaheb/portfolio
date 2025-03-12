@@ -245,6 +245,31 @@ const Index = () => {
           </div>
         </div>
       </section>
+            {/* CV Section */}
+<section className="py-24 px-6 text-center">
+  <h2 className="text-4xl md:text-5xl font-extrabold text-blue-400 mb-6">
+    My CV
+  </h2>
+  <p className="text-lg text-gray-300 mb-8">
+    Download or view my CV to learn more about my experience and skills.
+  </p>
+  <div className="flex justify-center gap-6">
+    <a
+      href="/mainCV.pdf"
+      target="_blank"
+      className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-semibold transition-all duration-300"
+    >
+      Open CV
+    </a>
+    <a
+      href="/mainCV.pdf"
+      download="Aditya_Gaur_CV.pdf"
+      className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white font-semibold transition-all duration-300"
+    >
+      Download CV
+    </a>
+  </div>
+</section>
     </div>
   );
 };
