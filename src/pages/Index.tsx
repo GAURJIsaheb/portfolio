@@ -56,7 +56,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#3b82f6_0%,#000_80%)] opacity-70 animate-glow"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe')] bg-cover bg-center opacity-15"></div>
         <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-textGlow">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-bounce">
             Code That Captivates
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mt-6 max-w-md mx-auto animate-on-scroll opacity-0">
@@ -66,7 +66,7 @@ const Index = () => {
             href="#contact"
             className="mt-8 inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-purple-700 hover:scale-110 transition-all duration-300 animate-on-scroll opacity-0 delay-100"
           >
-            Start a Revolution
+            Connect with ME !
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
         </div>
@@ -245,6 +245,32 @@ const Index = () => {
           </div>
         </div>
       </section>
+      {/* CV Section */}
+<section className="py-24 px-6 text-center">
+  <h2 className="text-4xl md:text-5xl font-extrabold text-blue-400 mb-6">
+    My CV
+  </h2>
+  <p className="text-lg text-gray-300 mb-8">
+    Download or view my CV to learn more about my experience and skills.
+  </p>
+  <div className="flex justify-center gap-6">
+    <a
+      href="/mainCV.pdf"
+      target="_blank"
+      className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-semibold transition-all duration-300"
+    >
+      Open CV
+    </a>
+    <a
+      href="/mainCV.pdf"
+      download="Aditya_Gaur_CV.pdf"
+      className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white font-semibold transition-all duration-300"
+    >
+      Download CV
+    </a>
+  </div>
+</section>
+
     </div>
   );
 };
