@@ -265,20 +265,7 @@ const Index = () => {
         <a href={cv} className="flex justify-center items-center gap-2 cursor-pointer hover:underline" download><img src={resumeImg} className="h-8 w-8"/>Resume</a>
 
 
-          <a
-            href="/maincv.pdf"
-            target="_blank"
-            className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-semibold transition-all duration-300"
-          >
-            Open CV
-          </a>
-          <a
-            href="/maincv.pdf"
-            download="Aditya_Gaur_CV.pdf"
-            className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white font-semibold transition-all duration-300"
-          >
-            Download CV
-          </a>
+          
 
         </div>
       </section>
