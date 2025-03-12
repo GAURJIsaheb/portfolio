@@ -255,14 +255,14 @@ const Index = () => {
   </p>
   <div className="flex justify-center gap-6">
     <a
-      href="/mainCV.pdf"
+      href="../../Public/mainCV.pdf"
       target="_blank"
       className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-semibold transition-all duration-300"
     >
       Open CV
     </a>
     <a
-      href="/mainCV.pdf"
+      href="../../Public/mainCV.pdf"
       download="Aditya_Gaur_CV.pdf"
       className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white font-semibold transition-all duration-300"
     >
