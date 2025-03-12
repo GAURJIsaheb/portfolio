@@ -2,7 +2,9 @@ import { useEffect, useRef } from "react";
 import { Github, Linkedin, Mail, ArrowRight, Code2, Server, Database, Palette, Languages } from "lucide-react";
 import img1 from "../../Public/pr1.jpg";
 import img2 from "../../Public/pr2.jpg";
-
+import resumeImg from "../assets/resume.png"
+import cv from "../assets/mainCV.pdf"
+import leetcodesvg from "../assets/leetcode.svg"
 const projects = [
   {
     id: 1,
@@ -82,8 +84,7 @@ const Index = () => {
             </h2>
             <div className="bg-gray-900/80 p-8 rounded-2xl shadow-xl border border-blue-500/30">
               <p className="text-lg text-gray-200 leading-relaxed">
-              With over 5 years of expertise in Full Stack Development, I transform ideas into seamless digital experiences—blending intuitive frontends with robust backends to craft solutions that captivate and perform.
-              Armed with modern frameworks, cutting-edge technologies, and an unyielding passion for innovation, I thrive on pushing boundaries and delivering excellence.
+              A passionate and dedicated Computer Science student specializing in full-stack development, with a strong foundation in building scalable, user-friendly web applications from concept through deployment. I excel at crafting responsive, intuitive interfaces and optimizing server architectures for performance and reliability. Alongside my full-stack expertise, I have a solid understanding of DevOps practices, including Docker, Kubernetes, NGINX, and basic AWS services, enabling smooth deployment and efficient application management. Additionally, I am proficient in C++ for Data Structures and Algorithms, showcasing strong problem-solving abilities. I’m excited to contribute to innovative projects while continuously expanding my tech knowledge in a dynamic field.
               </p>
               <p className="text-lg text-gray-200 mt-4 leading-relaxed">
                 My toolkit? Modern frameworks, cutting-edge tech, and a relentless drive to push boundaries.
@@ -228,6 +229,11 @@ const Index = () => {
               { icon: <Github className="w-8 h-8" />, link: "https://github.com", label: "GitHub" },
               { icon: <Linkedin className="w-8 h-8" />, link: "https://www.linkedin.com/in/adityagaur01/", label: "LinkedIn" },
               { icon: <Mail className="w-8 h-8" />, link: "mailto:contact@example.com", label: "Email" },
+              {
+                icon: <img src={leetcodesvg} alt="Leetcode" className="w-8 h-8" />,
+                link: "https://leetcode.com/u/adityagaur086/",
+                label: "Leetcode"
+              }
             ].map((contact) => (
               <a
                 key={contact.label}
@@ -255,48 +261,13 @@ const Index = () => {
           Download or view my CV to learn more about my experience and skills.
         </p>
         <div className="flex justify-center gap-6">
-          <a
-            href="/mainCV.pdf"
-            target="_blank"
-            className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-semibold transition-all duration-300"
-          >
-            Open CV
-          </a>
-          <a
-            href="/mainCV.pdf"
-            download="Aditya_Gaur_CV.pdf"
-            className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white font-semibold transition-all duration-300"
-          >
-            Download CV
-          </a>
+        <a href={cv} className="flex justify-center items-center gap-2 cursor-pointer hover:underline" download><img src={resumeImg} className="h-8 w-8"/>Resume</a>
+
         </div>
       </section>
 
 
-<section className="py-24 px-6 text-center">
-  <h2 className="text-4xl md:text-5xl font-extrabold text-blue-400 mb-6">
-    My CV
-  </h2>
-  <p className="text-lg text-gray-300 mb-8">
-    Download or view my CV to learn more about my experience and skills.
-  </p>
-  <div className="flex justify-center gap-6">
-    <a
-      href="Public/mainCV.pdf"
-      target="_blank"
-      className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-semibold transition-all duration-300"
-    >
-      Open CV
-    </a>
-    <a
-      href="Public/mainCV.pdf"
-      download="Aditya_Gaur_CV.pdf"
-      className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white font-semibold transition-all duration-300"
-    >
-      Download CV
-    </a>
-  </div>
-</section>
+
 
     </div>
   );
