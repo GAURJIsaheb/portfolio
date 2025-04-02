@@ -20,13 +20,13 @@ const projects = [
     image: img2,
     link: "https://aiproject-woad.vercel.app/",
   },
-  // {
-  //   id: 3,
-  //   title: "Quantum Hub",
-  //   description: "A futuristic web ecosystem for seamless digital interaction.",
-  //   image: "/pr3.jpg",
-  //   link: "https://projectthree.com",
-  // },
+  {
+    id: 3,
+    title: "Money Mate",
+    description: "A futuristic web ecosystem for seamless tracking of difference transactions.",
+    image: "/pr3.jpg",
+    link: "https://smart-finance-rose.vercel.app/",
+  },
 ];
 
 const Index = () => {
