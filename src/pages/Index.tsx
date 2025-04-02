@@ -20,13 +20,13 @@ const projects = [
     image: img2,
     link: "https://aiproject-woad.vercel.app/",
   },
-  // {
-  //   id: 3,
-  //   title: "Quantum Hub",
-  //   description: "A futuristic web ecosystem for seamless digital interaction.",
-  //   image: "/pr3.jpg",
-  //   link: "https://projectthree.com",
-  // },
+  {
+    id: 3,
+    title: "Money Mate",
+    description: "A futuristic web ecosystem for seamless tracking of difference transactions.",
+    image: "/pr3.jpg",
+    link: "https://smart-finance-rose.vercel.app/",
+  },
 ];
 
 const Index = () => {
@@ -265,7 +265,20 @@ const Index = () => {
         <a href={cv} className="flex justify-center items-center gap-2 cursor-pointer hover:underline" download><img src={resumeImg} className="h-8 w-8"/>Resume</a>
 
 
-          
+          <a
+            href="/maincv.pdf"
+            target="_blank"
+            className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-semibold transition-all duration-300"
+          >
+            Open CV
+          </a>
+          <a
+            href="/maincv.pdf"
+            download="Aditya_Gaur_CV.pdf"
+            className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white font-semibold transition-all duration-300"
+          >
+            Download CV
+          </a>
 
         </div>
       </section>
