@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Github, Linkedin, Mail, ArrowRight, Code2, Server, Database, Palette, Languages } from "lucide-react";
 import img1 from "../../Public/pr1.jpg";
 import img2 from "../../Public/pr2.jpg";
+import img3 from "../../Public/pr3.jpg";
 import resumeImg from "../assets/resume.png"
 import cv from "../assets/mainCV.pdf"
 import leetcodesvg from "../assets/leetcode.svg"
@@ -24,7 +25,7 @@ const projects = [
     id: 3,
     title: "Money Mate",
     description: "A futuristic web ecosystem for seamless tracking of difference transactions.",
-    image: "/pr3.jpg",
+    image: img3,
     link: "https://smart-finance-rose.vercel.app/",
   },
 ];
